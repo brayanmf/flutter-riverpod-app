@@ -1,11 +1,18 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
-import 'package:riverpod_app/presentation/screens/screens.dart';
+# manejando rotuer mediante riverpod
 
+- tambien se puede hacer por provider
+```
 
+    return MaterialApp.router(
+      title: 'Riverpod Providers',
+      debugShowCheckedModeBanner: false,
+      routerConfig: appRouter,
+      theme: AppTheme( isDarkmode: false ).getTheme(),
+    );
+  
 
-final appRouterProvider = Provider<GoRouter>((ref) {
-  return   GoRouter(
+-----
+final appRouter = GoRouter(
   routes: [
 
     GoRoute(
@@ -61,4 +68,12 @@ final appRouterProvider = Provider<GoRouter>((ref) {
 
 
   ]);
-});
+
+```
+
+> nos puede servir
+
+'
+ pueda que no tengamos acceso al context o 
+quereamos tener la intancia 
+'
